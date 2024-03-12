@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARBUCKS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- <div class="logo"><img src="logo.webp" alt=""></div> -->
+            <div class="logo">STAR<span>BUCKS</span></div>
+            <ul class="navbar">
+                <li><a href="#home">home</a></li>
+                <li><a href="#menu">menu</a></li>
+                <li><a href="#offers">offers</a></li>
+                <li><a href="#order">order now</a></li>
+            </ul>
+        </nav>
+    </header>
+        <section class="home" id="home">
+            <div class="text">
+                <span>Welcome To</span>
+                <h1>STARBUCKS COFFEE</h1>
+                <h2> Free Coffee is a tap away</h2>
+                <a href="#order"><button class="btn">Order now</button></a>
+            </div>
+            <div class="image">
+                <img src="st1.jpg">
+            </div>
+        </section>
+
+    <!-- MENU -->
+    <div id="menu">
+    <div class="heading">
+        <h1>MENU</h1>
+        <table border="1">
+            <tr>
+              <th style="text-align: center; font-weight: bold; color: #008148; font-size: 20px;">Image</th>
+              <th style="text-align: center; font-weight: bold; color: #008148; font-size: 20px;">Name</th>
+              <th style="text-align: center; font-weight: bold; color: #008148; font-size: 20px;">Price</th>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><img src="im1.jfif"></td>
+              <td style="text-align: center;">Caramel</td>
+              <td style="text-align: center;">$2.3</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><img src="im2.png"></td>
+              <td style="text-align: center;">Serious s'berry Frappuccino</td>
+              <td style="text-align: center;">$3.6</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><img src="im3.png"></td>
+                <td style="text-align: center;">Ice-Americano</td>
+                <td style="text-align: center;">$2.2</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><img src="im4.jpg"></td>
+                <td style="text-align: center;">Mocha Chocolate Shake</td>
+                <td style="text-align: center;">$4.2</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><img src="im6.png"></td>
+                <td style="text-align: center;">Green Macha</td>
+                <td style="text-align: center;">$6.4</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- OFFERS -->
+<div id="offers">
+    <h1>OFFERS</h1>
+    <div class="container">
+        <div class="box">
+        <img src="im p1.webp">
+        <h3>get 50% off </h3>
+    </div>
+    <div class="box">
+        <img src="img6.webp">
+        <h3>get 50% off </h3>
+    </div>
+    <div class="box">
+        <img src="imgp5.jpg">
+        <h3>get 50% off </h3>
+    </div>
+    </div>
+</div>
+
+<!-- ORDER -->
+<div id="order">
+    <h1>ORDER NOW</h1>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a2469d88-66e3-402d-b10b-d9a547049c68">
+    <div>
+        <label for="name" style="color: #008148; font-weight: bold; font-size: 20px;">Name:</label> <br><br>
+        <input type="text" id="name" name="name" required>
+    </div> <br>
+    <div>
+        <label for="email" style="color: #008148; font-weight: bold; font-size: 20px;">Email:</label> <br><br>
+        <input type="email" id="email" name="email" required>
+    </div> <br>
+    <div>
+        <label for="drink_type" style="color: #008148; font-weight: bold; font-size: 20px;">Drink Type:</label> <br><br>
+        <select id="drink_type" name="drink_type" required>
+            <option value="">Select</option>
+            <option value="caramel">Caramel</option>
+            <option value="Serious s'berry Frappuccino">Serious s'berry Frappuccino</option>
+            <option value="ice-americano">Ice-Americano</option>
+            <option value="mocha chocolate shake">Mocha Chocolate Shake</option>
+            <option value="green macha">Green Macha</option>
+        </select>
+    </div> <br>
+    <div>
+        <label for="size" style="color: #008148; font-weight: bold; font-size: 20px;">Size:</label> <br><br>
+        <input type="radio" id="small" name="size" value="small" required>
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="size" value="large">
+        <label for="large">Large</label>
+    </div> <br>
+    <div>
+        <label for="extras" style="color: #008148; font-weight: bold; font-size: 20px;">Extras:</label> <br><br>
+        <input type="checkbox" id="milk" name="extras[]" value="milk">
+        <label for="milk">Milk</label>
+        <input type="checkbox" id="sugar" name="extras[]" value="sugar">
+        <label for="sugar">Sugar</label>
+    </div> <br>
+    <div>
+        <label for="comments" style="color: #008148; font-weight: bold; font-size: 20px;">Comments:</label> <br><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    </div> <br>
+    <div>
+        <label for="payment" style="color: #008148; font-weight: bold; font-size: 20px;">Payment Method:</label> <br><br>
+        <select id="payment" name="payment" required>
+            <option value="">Select</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="UPI">UPI</option>
+            <option value="cash">Cash on Delivery/Pickup</option>
+        </select>
+    </div> <br>
+    <div>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Agree to Terms and Conditions</label>
+    </div> <br>
+    <div>
+        <input type="submit" value="Place Order">
+    </div>
+   </form> <br><br>
+</div>
+
+
+<section>
+    <footer>
+        <p>© Starbucks | All copy rights reserved</p>
+    </footer>
+</section>
+
+
+    
+</body>
+</html>
